@@ -1,7 +1,12 @@
 $thickness: 10px;
+$style: solid;
 
 @mixin border($thickness) {
       border-width: $thickness;
+      @content;
      }
 
-img {@include border($thickness);}
+img {@include border($thickness) {
+    border-style:$style;
+}
+}
